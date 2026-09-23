@@ -3,7 +3,78 @@
     "lessons": [],
     "assignments": [],
     "labs": [],
-    "exams": [],
+    "exams": [
+      {
+        "name": "Moddule A-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule A-1.pdf",
+        "size": 335666
+      },
+      {
+        "name": "Moddule A-3.pdf",
+        "path": "subjects/physics-2/exams/Moddule A-3.pdf",
+        "size": 349263
+      },
+      {
+        "name": "Moddule B-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule B-1.pdf",
+        "size": 338111
+      },
+      {
+        "name": "Moddule B-3.pdf",
+        "path": "subjects/physics-2/exams/Moddule B-3.pdf",
+        "size": 348889
+      },
+      {
+        "name": "Moddule C-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule C-1.pdf",
+        "size": 352163
+      },
+      {
+        "name": "Moddule C-3.pdf",
+        "path": "subjects/physics-2/exams/Moddule C-3.pdf",
+        "size": 348086
+      },
+      {
+        "name": "Moddule D-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule D-1.pdf",
+        "size": 340306
+      },
+      {
+        "name": "Moddule D-3.pdf",
+        "path": "subjects/physics-2/exams/Moddule D-3.pdf",
+        "size": 348600
+      },
+      {
+        "name": "Moddule E-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule E-1.pdf",
+        "size": 335868
+      },
+      {
+        "name": "Moddule E-3.pdf",
+        "path": "subjects/physics-2/exams/Moddule E-3.pdf",
+        "size": 348903
+      },
+      {
+        "name": "Moddule F-1.pdf",
+        "path": "subjects/physics-2/exams/Moddule F-1.pdf",
+        "size": 316884
+      },
+      {
+        "name": "Re-EXa.B1C+CE2024_\u0660\u0662\u0660\u0665\u0663\u0667.pdf",
+        "path": "subjects/physics-2/exams/Re-EXa.B1C+CE2024_\u0660\u0662\u0660\u0665\u0663\u0667.pdf",
+        "size": 308590
+      },
+      {
+        "name": "physics 1.pdf",
+        "path": "subjects/physics-2/exams/physics 1.pdf",
+        "size": 1054361
+      },
+      {
+        "name": "physics 2.pdf",
+        "path": "subjects/physics-2/exams/physics 2.pdf",
+        "size": 1053149
+      }
+    ],
     "summaries": [
       {
         "name": "Physics ( II ) 2.pdf",
