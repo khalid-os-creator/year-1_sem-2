@@ -6,8 +6,12 @@ on:
       - main
     paths:
       - 'subjects/**'
+<<<<<<< Updated upstream
       - '.github/workflows/**'
   workflow_dispatch:
+=======
+  workflow_dispatch: # Enables manual triggering via GitHub Actions UI
+>>>>>>> Stashed changes
 
 permissions:
   contents: write
@@ -65,23 +69,36 @@ jobs:
       - name: Generate catalog.json
         run: |
           python3 -c '
+<<<<<<< Updated upstream
           import os, json, re, unicodedata
+=======
+          import os, json, re
+>>>>>>> Stashed changes
 
           subjects_dir = "subjects"
           categories = ["lessons", "assignments", "labs", "exams", "summaries"]
           catalog = {}
 
           def clean_str(s):
+<<<<<<< Updated upstream
               # Normalize unicode to NFC and strip hidden control characters (\u200f, \u200e, zero-width spaces)
               normalized = unicodedata.normalize("NFC", s)
               return re.sub(r"[\u200e\u200f\u200b-\u200d\ufeff]", "", normalized).strip()
+=======
+              # Strip hidden Unicode direction/control characters (like \u200f, \u200e)
+              return re.sub(r"[\u200e\u200f\u200b-\u200d\ufeff]", "", s).strip()
+>>>>>>> Stashed changes
 
           if os.path.exists(subjects_dir):
               for subject in sorted(os.listdir(subjects_dir)):
                   sub_path = os.path.join(subjects_dir, subject)
+<<<<<<< Updated upstream
                   
                   # Skip hidden directories like .git or .ds_store
                   if os.path.isdir(sub_path) and not subject.startswith("."):
+=======
+                  if os.path.isdir(sub_path):
+>>>>>>> Stashed changes
                       clean_subj = clean_str(subject)
                       catalog[clean_subj] = {}
                       
@@ -94,6 +111,7 @@ jobs:
                                   if f.lower().endswith(".pdf") and not f.startswith("."):
                                       full_file_path = os.path.join(cat_path, f)
                                       file_size = os.path.getsize(full_file_path)
+<<<<<<< Updated upstream
                                       clean_file_name = clean_str(f)
                                       
                                       # Build consistent relative URL path
@@ -102,13 +120,25 @@ jobs:
                                       catalog[clean_subj][cat].append({
                                           "name": clean_file_name,
                                           "path": rel_path,
+=======
+                                      clean_name = clean_str(f)
+                                      
+                                      catalog[clean_subj][cat].append({
+                                          "name": clean_name,
+                                          "path": f"subjects/{subject}/{cat}/{f}",
+>>>>>>> Stashed changes
                                           "size": file_size
                                       })
 
+          # ensure_ascii=False forces native UTF-8 (Arabic stays Arabic instead of \u062d...)
           with open("catalog.json", "w", encoding="utf-8") as out:
               json.dump(catalog, out, indent=2, ensure_ascii=False)
 
+<<<<<<< Updated upstream
           print("Generated catalog.json with keys:", list(catalog.keys()))
+=======
+          print("Successfully generated clean catalog.json")
+>>>>>>> Stashed changes
           '
 
       - name: Commit and push changes
