@@ -6,7 +6,8 @@ on:
       - main
     paths:
       - 'subjects/**'
-  workflow_dispatch: # Enables the manual "Run workflow" button in GitHub Actions UI
+      - '.github/workflows/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -25,52 +26,89 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ghostscript python3
 
-      - name: Auto-compress new/modified PDFs
+      - name: Auto-compress new or modified PDFs
         run: |
-          git diff --name-only --diff-filter=AM HEAD~1 HEAD | grep '\.pdf$' | while read -r file; do
-            if [ -f "$file" ]; then
-              echo "Compressing $file..."
-              gs -sDEVICE=pdfwrite \
-                 -dCompatibilityLevel=1.4 \
-                 -dPDFSETTINGS=/ebook \
-                 -dNOPAUSE -dQUIET -dBATCH \
-                 -sOutputFile="${file}.tmp" "$file"
-              if [ -f "${file}.tmp" ]; then
-                mv "${file}.tmp" "$file"
+          if git rev-parse HEAD~1 >/dev/null 2>&1; then
+            FILES=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD | grep '\.pdf$' || true)
+          else
+            FILES=$(find subjects -type f -name "*.pdf" 2>/dev/null || true)
+          fi
+
+          if [ -z "$FILES" ]; then
+            echo "No PDF changes detected."
+          else
+            echo "$FILES" | while read -r file; do
+              if [ -f "$file" ]; then
+                echo "Processing: $file"
+                ORIG_SIZE=$(stat -c%s "$file")
+                
+                gs -sDEVICE=pdfwrite \
+                   -dCompatibilityLevel=1.4 \
+                   -dPDFSETTINGS=/ebook \
+                   -dNOPAUSE -dQUIET -dBATCH \
+                   -sOutputFile="${file}.tmp" "$file" || true
+
+                if [ -f "${file}.tmp" ]; then
+                  NEW_SIZE=$(stat -c%s "${file}.tmp")
+                  if [ "$NEW_SIZE" -lt "$ORIG_SIZE" ] && [ "$NEW_SIZE" -gt 0 ]; then
+                    mv "${file}.tmp" "$file"
+                    echo "Compressed: $ORIG_SIZE -> $NEW_SIZE bytes"
+                  else
+                    rm -f "${file}.tmp"
+                    echo "Skipped: Compressed file was not smaller."
+                  fi
+                fi
               fi
-            fi
-          done
+            done
+          fi
 
       - name: Generate catalog.json
         run: |
           python3 -c '
-          import os, json
+          import os, json, re, unicodedata
 
           subjects_dir = "subjects"
+          categories = ["lessons", "assignments", "labs", "exams", "summaries"]
           catalog = {}
+
+          def clean_str(s):
+              # Normalize unicode to NFC and strip hidden control characters (\u200f, \u200e, zero-width spaces)
+              normalized = unicodedata.normalize("NFC", s)
+              return re.sub(r"[\u200e\u200f\u200b-\u200d\ufeff]", "", normalized).strip()
 
           if os.path.exists(subjects_dir):
               for subject in sorted(os.listdir(subjects_dir)):
                   sub_path = os.path.join(subjects_dir, subject)
-                  if os.path.isdir(sub_path):
-                      catalog[subject] = {}
-                      for cat in ["lessons", "assignments", "labs", "exams", "summaries"]:
+                  
+                  # Skip hidden directories like .git or .ds_store
+                  if os.path.isdir(sub_path) and not subject.startswith("."):
+                      clean_subj = clean_str(subject)
+                      catalog[clean_subj] = {}
+                      
+                      for cat in categories:
                           cat_path = os.path.join(sub_path, cat)
-                          catalog[subject][cat] = []
+                          catalog[clean_subj][cat] = []
+                          
                           if os.path.exists(cat_path) and os.path.isdir(cat_path):
                               for f in sorted(os.listdir(cat_path)):
-                                  if f.lower().endswith(".pdf"):
+                                  if f.lower().endswith(".pdf") and not f.startswith("."):
                                       full_file_path = os.path.join(cat_path, f)
                                       file_size = os.path.getsize(full_file_path)
-                                      catalog[subject][cat].append({
-                                          "name": f,
-                                          "path": f"subjects/{subject}/{cat}/{f}",
+                                      clean_file_name = clean_str(f)
+                                      
+                                      # Build consistent relative URL path
+                                      rel_path = f"subjects/{subject}/{cat}/{f}"
+                                      
+                                      catalog[clean_subj][cat].append({
+                                          "name": clean_file_name,
+                                          "path": rel_path,
                                           "size": file_size
                                       })
 
           with open("catalog.json", "w", encoding="utf-8") as out:
-              json.dump(catalog, out, indent=2)
-          print("Successfully generated catalog.json")
+              json.dump(catalog, out, indent=2, ensure_ascii=False)
+
+          print("Generated catalog.json with keys:", list(catalog.keys()))
           '
 
       - name: Commit and push changes
