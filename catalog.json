@@ -1,12 +1,28 @@
 {
   "c-plus-plus": {
-    "lessons": [],
+    "lessons": [
+      {
+        "name": "01 Introduction to OOP.pdf",
+        "path": "subjects/c-plus-plus/lessons/01 Introduction to OOP.pdf",
+        "size": 326551
+      },
+      {
+        "name": "03 Overloading Operators 16.pdf",
+        "path": "subjects/c-plus-plus/lessons/03 Overloading Operators 16.pdf",
+        "size": 323142
+      },
+      {
+        "name": "07  Exceptions 16.pdf",
+        "path": "subjects/c-plus-plus/lessons/07  Exceptions 16.pdf",
+        "size": 205795
+      }
+    ],
     "assignments": [],
     "labs": [
       {
         "name": "OOP_Lab1.pdf",
         "path": "subjects/c-plus-plus/labs/OOP_Lab1.pdf",
-        "size": 123553
+        "size": 123464
       },
       {
         "name": "\u062d\u0635\u0635 \u0644\u0627\u0628  OOP.pdf",
@@ -17,34 +33,19 @@
         "name": "\u200f\u200fOOPLab2.pdf",
         "path": "subjects/c-plus-plus/labs/\u200f\u200fOOPLab2.pdf",
         "size": 180448
+      },
+      {
+        "name": "\u200f\u200f\u200f\u200fOOPLab3.pdf",
+        "path": "subjects/c-plus-plus/labs/\u200f\u200f\u200f\u200fOOPLab3.pdf",
+        "size": 178803
+      },
+      {
+        "name": "\u200f\u200f\u200f\u200f\u200f\u200fOOPLab5.pdf",
+        "path": "subjects/c-plus-plus/labs/\u200f\u200f\u200f\u200f\u200f\u200fOOPLab5.pdf",
+        "size": 351645
       }
     ],
     "exams": [
-      {
-        "name": "OOP_ReExam_2018.pdf",
-        "path": "subjects/c-plus-plus/exams/OOP_ReExam_2018.pdf",
-        "size": 798507
-      },
-      {
-        "name": "Solve Exam OOP 2018.pdf",
-        "path": "subjects/c-plus-plus/exams/Solve Exam OOP 2018.pdf",
-        "size": 809419
-      },
-      {
-        "name": "Solved Exam \u2013 OOP 2022.pdf",
-        "path": "subjects/c-plus-plus/exams/Solved Exam \u2013 OOP 2022.pdf",
-        "size": 442786
-      },
-      {
-        "name": "\u0625\u0645\u062a\u062d\u0627\u0646 2023(oop).pdf",
-        "path": "subjects/c-plus-plus/exams/\u0625\u0645\u062a\u062d\u0627\u0646 2023(oop).pdf",
-        "size": 380749
-      },
-      {
-        "name": "\u0627\u0645\u062a\u062d\u0627\u0646 \u0635\u0628\u062d\u064a \u0662\u0660\u0662\u0662.pdf",
-        "path": "subjects/c-plus-plus/exams/\u0627\u0645\u062a\u062d\u0627\u0646 \u0635\u0628\u062d\u064a \u0662\u0660\u0662\u0662.pdf",
-        "size": 1262502
-      },
       {
         "name": "\u0646\u0645\u0627\u0630\u062c \u0627\u062e\u062a\u0628\u0627\u0632 c--.pdf",
         "path": "subjects/c-plus-plus/exams/\u0646\u0645\u0627\u0630\u062c \u0627\u062e\u062a\u0628\u0627\u0632 c--.pdf",
