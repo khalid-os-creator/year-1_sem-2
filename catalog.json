@@ -25,45 +25,45 @@
         "size": 123468
       },
       {
-        "name": "\u062d\u0635\u0635 \u0644\u0627\u0628  OOP.pdf",
-        "path": "subjects/c-plus-plus/labs/\u062d\u0635\u0635 \u0644\u0627\u0628  OOP.pdf",
+        "name": "حصص لاب  OOP.pdf",
+        "path": "subjects/c-plus-plus/labs/حصص لاب  OOP.pdf",
         "size": 727529
       },
       {
-        "name": "\u200f\u200fOOPLab2.pdf",
-        "path": "subjects/c-plus-plus/labs/\u200f\u200fOOPLab2.pdf",
+        "name": "OOPLab2.pdf",
+        "path": "subjects/c-plus-plus/labs/‏‏OOPLab2.pdf",
         "size": 180448
       },
       {
-        "name": "\u200f\u200f\u200f\u200fOOPLab3.pdf",
-        "path": "subjects/c-plus-plus/labs/\u200f\u200f\u200f\u200fOOPLab3.pdf",
+        "name": "OOPLab3.pdf",
+        "path": "subjects/c-plus-plus/labs/‏‏‏‏OOPLab3.pdf",
         "size": 178803
       },
       {
-        "name": "\u200f\u200f\u200f\u200f\u200f\u200fOOPLab5.pdf",
-        "path": "subjects/c-plus-plus/labs/\u200f\u200f\u200f\u200f\u200f\u200fOOPLab5.pdf",
+        "name": "OOPLab5.pdf",
+        "path": "subjects/c-plus-plus/labs/‏‏‏‏‏‏OOPLab5.pdf",
         "size": 351645
       }
     ],
     "exams": [
       {
-        "name": "\u0646\u0645\u0627\u0630\u062c \u0627\u062e\u062a\u0628\u0627\u0632 c--.pdf",
-        "path": "subjects/c-plus-plus/exams/\u0646\u0645\u0627\u0630\u062c \u0627\u062e\u062a\u0628\u0627\u0632 c--.pdf",
+        "name": "نماذج اختباز c--.pdf",
+        "path": "subjects/c-plus-plus/exams/نماذج اختباز c--.pdf",
         "size": 465749
       },
       {
-        "name": "\u0646\u0645\u0648\u0630\u062c \u0623\u062e\u062a\u0628\u0627\u0631 \u0623.\u0647\u0646\u062f \u0662\u0660\u0662\u0664.pdf",
-        "path": "subjects/c-plus-plus/exams/\u0646\u0645\u0648\u0630\u062c \u0623\u062e\u062a\u0628\u0627\u0631 \u0623.\u0647\u0646\u062f \u0662\u0660\u0662\u0664.pdf",
+        "name": "نموذج أختبار أ.هند ٢٠٢٤.pdf",
+        "path": "subjects/c-plus-plus/exams/نموذج أختبار أ.هند ٢٠٢٤.pdf",
         "size": 80434
       },
       {
-        "name": "\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646 --C\u0627\u0644\u062f\u0648\u0631\u0627\u0644\u0627\u0648\u0644.pdf",
-        "path": "subjects/c-plus-plus/exams/\u0646\u0645\u0648\u0630\u062c \u0627\u0644\u0627\u0645\u062a\u062d\u0627\u0646 --C\u0627\u0644\u062f\u0648\u0631\u0627\u0644\u0627\u0648\u0644.pdf",
+        "name": "نموذج الامتحان --Cالدورالاول.pdf",
+        "path": "subjects/c-plus-plus/exams/نموذج الامتحان --Cالدورالاول.pdf",
         "size": 1549179
       },
       {
-        "name": "\u0646\u0645\u0648\u0630\u062c \u0627\u0645\u062a\u062d\u0627\u0646 \u062f. \u0647\u0646\u062f \u0627\u0644\u062e\u0644\u0627\u0642\u064a pdf.pdf",
-        "path": "subjects/c-plus-plus/exams/\u0646\u0645\u0648\u0630\u062c \u0627\u0645\u062a\u062d\u0627\u0646 \u062f. \u0647\u0646\u062f \u0627\u0644\u062e\u0644\u0627\u0642\u064a pdf.pdf",
+        "name": "نموذج امتحان د. هند الخلاقي pdf.pdf",
+        "path": "subjects/c-plus-plus/exams/نموذج امتحان د. هند الخلاقي pdf.pdf",
         "size": 77120
       }
     ],
@@ -74,8 +74,8 @@
         "size": 969699
       },
       {
-        "name": "\u0645\u0644\u062e\u0635 C++ Loop \u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0627\u062a \u0645\u0646 (7-9).pdf",
-        "path": "subjects/c-plus-plus/summaries/\u0645\u0644\u062e\u0635 C++ Loop \u0627\u0644\u0645\u062d\u0627\u0636\u0631\u0627\u062a \u0645\u0646 (7-9).pdf",
+        "name": "ملخص C++ Loop المحاضرات من (7-9).pdf",
+        "path": "subjects/c-plus-plus/summaries/ملخص C++ Loop المحاضرات من (7-9).pdf",
         "size": 6159132
       }
     ]
@@ -86,13 +86,13 @@
     "labs": [],
     "exams": [
       {
-        "name": "\u0646\u0645\u0627\u0630\u062c E \u0645\u064a\u0643\u0627\u0646\u064a\u0643\u0627.pdf",
-        "path": "subjects/english-2/exams/\u0646\u0645\u0627\u0630\u062c E \u0645\u064a\u0643\u0627\u0646\u064a\u0643\u0627.pdf",
+        "name": "نماذج E ميكانيكا.pdf",
+        "path": "subjects/english-2/exams/نماذج E ميكانيكا.pdf",
         "size": 1158386
       },
       {
-        "name": "\u0646\u0645\u0648\u0630\u062c B- \u0627\u0646\u062c\u0644\u064a\u0632\u064a..pdf",
-        "path": "subjects/english-2/exams/\u0646\u0645\u0648\u0630\u062c B- \u0627\u0646\u062c\u0644\u064a\u0632\u064a..pdf",
+        "name": "نموذج B- انجليزي..pdf",
+        "path": "subjects/english-2/exams/نموذج B- انجليزي..pdf",
         "size": 276698
       }
     ],
@@ -164,8 +164,8 @@
         "size": 316884
       },
       {
-        "name": "Re-EXa.B1C+CE2024_\u0660\u0662\u0660\u0665\u0663\u0667.pdf",
-        "path": "subjects/physics-2/exams/Re-EXa.B1C+CE2024_\u0660\u0662\u0660\u0665\u0663\u0667.pdf",
+        "name": "Re-EXa.B1C+CE2024_٠٢٠٥٣٧.pdf",
+        "path": "subjects/physics-2/exams/Re-EXa.B1C+CE2024_٠٢٠٥٣٧.pdf",
         "size": 308590
       },
       {
